@@ -87,6 +87,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           branch: update-charts
+          base: main
           commit-message: Update caddy-ingress charts to ${{ github.ref_name }}
           title: Update caddy-ingress charts to ${{ github.ref_name }}
           body: |
