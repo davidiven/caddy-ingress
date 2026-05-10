@@ -2,28 +2,16 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
-
 # Use to test in minikube context
 minikube: false
-
 image:
   registry: docker.io
   repository: butlergroup/caddy-ingress
   pullPolicy: IfNotPresent
-  tag: "v0.4.54"
-
-global:
-  azure:
-    images:
-      caddy-ingress-controller:
-        tag: "v0.4.54"
-        image: caddy-ingress
-        registry: containerbutler-bxene7duhhe5d8cy.azurecr.io
-
+  tag: "v1.0.3"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-
 # Default values for the caddy ingress controller.
 ingressController:
   watchNamespace: ""
@@ -53,7 +41,6 @@ ingressController:
     experimentalSmartSort: false
     onDemandTLS: false
     permissionEndpoint: ""
-
 loadBalancer:
   enabled: true
   # Deprecated in Kubernetes v1.24
@@ -61,13 +48,12 @@ loadBalancer:
   # Set to 'Local' to maintain the client's IP on inbound connections
   externalTrafficPolicy:
   annotations: {}
-    # service.beta.kubernetes.io/aws-load-balancer-type:
-    # service.beta.kubernetes.io/aws-load-balancer-nlb-target-type:
-    # service.beta.kubernetes.io/aws-load-balancer-scheme:
-    # service.beta.kubernetes.io/aws-load-balancer-eip-allocations:
-    # service.beta.kubernetes.io/aws-load-balancer-subnets:
+  # service.beta.kubernetes.io/aws-load-balancer-type:
+  # service.beta.kubernetes.io/aws-load-balancer-nlb-target-type:
+  # service.beta.kubernetes.io/aws-load-balancer-scheme:
+  # service.beta.kubernetes.io/aws-load-balancer-eip-allocations:
+  # service.beta.kubernetes.io/aws-load-balancer-subnets:
   labels: {}
-
 service:
   # Set to 'Local' to maintain the client's IP on inbound connections
   externalTrafficPolicy: Cluster
@@ -87,7 +73,6 @@ service:
     enabled: false
     ipFamilies: ["IPv6", "IPv4"]
     ipFamilyPolicy: "PreferDualStack"
-
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
@@ -96,16 +81,13 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "caddy-ingress-controller"
-
 podAnnotations: {}
-
 podSecurityContext: {}
-  # fsGroup: 2000
+# fsGroup: 2000
 
 podDisruptionBudget:
   minAvailable: 1
   maxUnavailable:
-
 securityContext:
   allowPrivilegeEscalation: false
   capabilities:
@@ -114,21 +96,18 @@ securityContext:
   runAsUser: 1000
   runAsGroup: 1000
   runAsNonRoot: true
-
 resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+# We usually recommend not to specify default resources and to leave this as a conscious
+# choice for the user. This also increases chances charts run on environments with little
+# resources, such as Minikube. If you do want to specify resources, uncomment the following
+# lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+# limits:
+#   cpu: 100m
+#   memory: 128Mi
+# requests:
+#   cpu: 100m
+#   memory: 128Mi
 
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
