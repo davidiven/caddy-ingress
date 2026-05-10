@@ -77,6 +77,7 @@ github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
 github.com/butlergroup/caddy-dns-cloudflare v0.2.8 h1:ry6NaHhbWEsjacUCl03gwn/YYY3hynnBJtaGiifpH5E=
 github.com/butlergroup/caddy-dns-cloudflare v0.2.8/go.mod h1:WAJyIgNwSuUBV58qJzKnX/vi9kVCQJDBLNlhWnhRtTk=
+github.com/caddy-dns/cloudflare v0.2.4/go.mod h1:Rge8GoKEa65RIUd1GQ9DmOmnjD9FMztz5yiaKvf351E=
 github.com/caddyserver/caddy/v2 v2.11.2 h1:iOlpsSiSKqEW+SIXrcZsZ/NO74SzB/ycqqvAIEfIm64=
 github.com/caddyserver/caddy/v2 v2.11.2/go.mod h1:ASNYYmKhIVWWMGPfNxclI5DqKEgU3FhmL+6NZWzQEag=
 github.com/caddyserver/certmagic v0.25.3 h1:mGf5ba8F7xA4c5jfDZZbK2buY1VEkbnwpMDixaju94A=
