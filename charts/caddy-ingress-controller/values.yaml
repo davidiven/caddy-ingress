@@ -8,17 +8,9 @@ minikube: false
 
 image:
   registry: docker.io
-  repository: butlergroup/caddy-ingress
+  repository: davidiven/caddy-ingress
   pullPolicy: IfNotPresent
   tag: "v0.4.54"
-
-global:
-  azure:
-    images:
-      caddy-ingress-controller:
-        tag: "v0.4.54"
-        image: caddy-ingress
-        registry: containerbutler-bxene7duhhe5d8cy.azurecr.io
 
 imagePullSecrets: []
 nameOverride: ""
@@ -44,8 +36,8 @@ ingressController:
     acmeEABMacKey: ""
     # -- Acme Server URL
     acmeCA: ""
-    acmeDNSProvider: ""
-    acmeDNSResolvers: []
+    acmeDNSProvider: "cloudflare"
+    acmeDNSResolvers: ["1.1.1.1"]
     debug: false
     email: ""
     metrics: true

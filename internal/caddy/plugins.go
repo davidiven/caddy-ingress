@@ -1,5 +1,5 @@
 package caddy
 
 import (
-	_ "github.com/davidiven/caddy-dns-cloudflare"
+	_ "github.com/caddy-dns/cloudflare"
 )
