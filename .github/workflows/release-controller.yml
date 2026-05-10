@@ -13,11 +13,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  ACR_REGISTRY_NAME: containerbutler # example: "myRegistry" .azurecr.io
-  ACR_REPO_NAME: ${{ github.event.repository.name }} # example: myRepo
-  KEY_ID: ${{ secrets.ACR_KEY_ID }} # example: https://mynotationakv.vault.azure.net/keys/notationLeafCert/c585b8ad8fc542b28e41e555d9b3a1fd
-  NOTATION_EXPERIMENTAL: 1 # [Optional] when set, use Referrers API in the workflow (Recommended)
 
 jobs:
   goreleaser:
@@ -36,7 +31,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          ref: main
           fetch-depth: 0
       - name: Set up Go
         uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0
@@ -72,6 +66,9 @@ jobs:
 
   bump-charts:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v5
