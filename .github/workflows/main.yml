@@ -134,8 +134,7 @@ jobs:
           EOF
 
       - name: Load image into Kind cluster
-        run: kind load docker-image "davidiven/caddy-ingress:latest-amd64" --name
-          chart-testing
+        run: kind load docker-image "davidiven/caddy-ingress:latest-amd64" --name chart-testing
 
       - name: Run chart-testing (install)
         run: ct install --config ct.yaml
