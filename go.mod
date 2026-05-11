@@ -2,7 +2,7 @@ module github.com/davidiven/caddy-ingress
 
 go 1.26.3
 
-require ( 	
+require (
 	github.com/caddy-dns/cloudflare v0.2.4
 	github.com/caddyserver/caddy/v2 v2.11.2
 	github.com/caddyserver/certmagic v0.25.3
