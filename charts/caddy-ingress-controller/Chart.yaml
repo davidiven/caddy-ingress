@@ -1,6 +1,6 @@
 apiVersion: v2
 name: caddy-ingress-controller
-home: https://github.com/butlergroup/caddy-ingress
+home: https://github.com/davidiven/caddy-ingress
 description: A Helm chart for the Caddy Kubernetes ingress controller
 icon: https://caddyserver.com/resources/images/caddy-circle-lock.svg
 type: application
@@ -10,7 +10,7 @@ keywords:
   - ingress-controller
   - caddyserver
 sources:
-  - https://github.com/butlergroup/caddy-ingress
+  - https://github.com/davidiven/caddy-ingress
 maintainers:
   - name: mavimo
     url: https://github.com/mavimo
@@ -18,3 +18,5 @@ maintainers:
     url: https://github.com/embraser01
   - name: butlergroup
     url: https://github.com/butlergroup
+  - name: davidiven
+    url: https://github.com/davidiven

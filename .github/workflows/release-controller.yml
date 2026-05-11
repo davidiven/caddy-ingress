@@ -71,7 +71,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set appVersion
         uses: mikefarah/yq@v4
@@ -84,10 +84,9 @@ jobs:
           cmd: yq -i '.image.tag = "${{ github.ref_name }}"' 'charts/caddy-ingress-controller/values.yaml'
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: update-charts
-          base: main
           commit-message: Update caddy-ingress charts to ${{ github.ref_name }}
           title: Update caddy-ingress charts to ${{ github.ref_name }}
           body: |
