@@ -1,5 +1,5 @@
 image:
-  tag: lastest-amd64
+  tag: latest
 
 ingressController:
   verbose: true
