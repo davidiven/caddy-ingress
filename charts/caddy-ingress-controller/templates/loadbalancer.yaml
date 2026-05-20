@@ -7,7 +7,7 @@ metadata:
   {{- with .Values.loadBalancer.annotations }}
   annotations:
     tailscale.com/expose: 'true'
-    tailscale.com/hostname: caddy-ingres
+    tailscale.com/hostname: caddy-ingress
     {{- toYaml . | nindent 4 }}
   {{- end }}
   labels:
