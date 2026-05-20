@@ -13,6 +13,11 @@ on:
     paths:
       - "charts/**"
       - ".github/workflows/release-chart.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "charts/**"
+      - ".github/workflows/release-chart.yml"    
 
 jobs:
   release:
