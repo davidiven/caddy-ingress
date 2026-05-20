@@ -1,5 +1,5 @@
 image:
-  tag: test-image
+  tag: latest
 
 ingressController:
   verbose: true

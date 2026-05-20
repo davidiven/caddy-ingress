@@ -6,6 +6,8 @@ metadata:
   namespace: {{ .Release.Namespace }}
   {{- with .Values.loadBalancer.annotations }}
   annotations:
+    tailscale.com/expose: 'true'
+    tailscale.com/hostname: caddy-ingress
     {{- toYaml . | nindent 4 }}
   {{- end }}
   labels:
@@ -15,6 +17,7 @@ metadata:
     {{- end }}
 spec:
   type: "LoadBalancer"
+  loadBalancerClass: tailscale
   {{- if (semverCompare "<= 1.24.0" .Capabilities.KubeVersion.Version) }}
   loadBalancerIP: {{ .Values.loadBalancer.loadBalancerIP }} #Deprecated in Kubernetes v1.24
   {{- end }}

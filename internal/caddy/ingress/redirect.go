@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/butlergroup/caddy-ingress/pkg/converter"
 	"github.com/caddyserver/caddy/v2/caddyconfig"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
+	"github.com/davidiven/caddy-ingress/pkg/converter"
 )
 
 type RedirectPlugin struct{}

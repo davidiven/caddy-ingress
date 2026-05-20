@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/butlergroup/caddy-ingress/pkg/store"
+	"github.com/davidiven/caddy-ingress/pkg/store"
 	v1 "k8s.io/api/core/v1"
 )
 

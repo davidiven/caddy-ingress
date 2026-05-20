@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/butlergroup/caddy-ingress/pkg/store"
+	"github.com/davidiven/caddy-ingress/pkg/store"
 	"github.com/stretchr/testify/require"
 )
 

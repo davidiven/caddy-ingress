@@ -2,6 +2,7 @@ name: Checks
 
 permissions:
   contents: read
+  id-token: write
 
 on:
   push:
@@ -88,7 +89,6 @@ jobs:
       - name: Run chart-testing (lint)
         run: ct lint --config ct.yaml
 
-      # https://github.com/sigstore/cosign-installer
       - name: Install cosign
         uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 #v4.1.2
       - name: Check install!
@@ -134,8 +134,7 @@ jobs:
           EOF
 
       - name: Load image into Kind cluster
-        run: kind load docker-image "butlergroup/caddy-ingress:latest-amd64" --name
-          chart-testing
+        run: kind load docker-image "davidiven/caddy-ingress:latest-amd64" --name chart-testing
 
       - name: Run chart-testing (install)
         run: ct install --config ct.yaml

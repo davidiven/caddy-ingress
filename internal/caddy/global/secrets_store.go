@@ -1,8 +1,8 @@
 package global
 
 import (
-	"github.com/butlergroup/caddy-ingress/pkg/converter"
-	"github.com/butlergroup/caddy-ingress/pkg/store"
+	"github.com/davidiven/caddy-ingress/pkg/converter"
+	"github.com/davidiven/caddy-ingress/pkg/store"
 )
 
 type SecretsStorePlugin struct{}

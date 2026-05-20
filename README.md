@@ -38,7 +38,7 @@ Caddy Ingress Controller adhere to the following steps:
 1. Add the Helm chart:
 
 ```sh
-helm repo add caddy-ingress http://butlergroup.net/caddy-ingress/
+helm repo add caddy-ingress https://davidiven.github.io/caddy-ingress/
 ```
 
 2. Create a new namespace in your cluster to isolate all Caddy resources.

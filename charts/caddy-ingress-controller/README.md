@@ -6,7 +6,7 @@ A helm chart for the Caddy Kubernetes ingress controller
 
 ```bash
 helm install caddy-ingress caddy-ingress-controller\
-  --repo http://butlergroup.net/caddy-ingress/ \
+  --repo http://davidiven/caddy-ingress/ \
   --namespace=caddy-system \
   --create-namespace
 ```
@@ -23,14 +23,14 @@ This chart bootstraps a caddy-ingress-controller deployment on a [Kubernetes](ht
 ## Installing the Chart
 
 ```bash
-helm repo add caddy-ingress http://butlergroup.net/caddy-ingress/
+helm repo add caddy-ingress http://davidiven/caddy-ingress/
 helm install caddy-ingress caddy-ingress/caddy-ingress-controller --namespace=caddy-system
 ```
 
 ## Installing the Chart with on-demand TLS enabled
 
 ```bash
-helm repo add caddy-ingress http://butlergroup.net/caddy-ingress/
+helm repo add caddy-ingress http://davidiven/caddy-ingress/
 helm install caddy-ingress caddy-ingress/caddy-ingress-controller \
   --namespace=caddy-system \
   --set ingressController.config.email=your@email.com \
@@ -66,7 +66,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | affinity | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"caddy/ingress"` |  |
+| image.repository | string | `"davidiven/caddy-ingress"` |  |
 | image.tag | string | `"latest"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingressController.config.acmeCA | string | `""` |  |
